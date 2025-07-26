@@ -5,203 +5,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MoZa Digital - Il tuo partner digitale</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            line-height: 1.6;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
         }
+
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #ffffff;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
         header {
             background-color: #007bff;
             color: white;
             padding: 40px 20px;
             text-align: center;
         }
+
         header h1 {
-            margin: 0;
-            font-size: 2.5em;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #ffffff;
         }
+
+        header p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+        }
+
+        .video-link {
+            background-color: #ffffff;
+            color: #007bff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
         nav {
-            background-color: #333;
-            color: white;
-            padding: 10px;
+            background-color: #2c3e50;
+            padding: 15px 0;
             text-align: center;
         }
+
         nav a {
             color: white;
-            margin: 0 15px;
             text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
         }
-        section {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
+
+        nav a:hover {
+            color: #6c5ce7;
         }
-        .services, .benefits {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-        .service-item, .benefit-item {
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            margin: 10px;
-            padding: 20px;
-            width: 300px;
+
+        .section-title {
             text-align: center;
+            margin: 40px 0 20px;
+            color: #2c3e50;
+            font-size: 2rem;
         }
-        .emoji {
-            font-size: 2em;
+
+        .section-subtitle {
+            text-align: center;
+            color: #6c5ce7;
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+        }
+
+        .prices-section {
+            display: flex;
+            justify-content: center;
+        }
+
+        .price-card {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        .price-card h3 {
+            color: #2c3e50;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 3rem;
+            color: #6c5ce7;
             margin-bottom: 10px;
         }
-        .pricing {
+
+        .price-sub {
+            color: #95a5a6;
+            font-size: 1rem;
+        }
+
+        .features-list {
+            list-style: none;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .features-list li {
+            margin: 15px 0;
+            display: flex;
+            align-items: center;
+            font-size: 1.1rem;
+            color: #2c3e50;
+        }
+
+        .checkmark {
+            background-color: #27ae60;
+            color: white;
+            font-size: 0.9rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-right: 15px;
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 20px;
             text-align: center;
         }
-        .pricing-item {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            margin: 20px auto;
-            padding: 20px;
-            width: 300px;
+
+        .made-with {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: #333;
         }
+
+        .made-with a {
+            color: #333;
+            text-decoration: none;
+            background-color: #f1f1f1;
+            padding: 5px 10px;
+            border-radius: 20px;
+        }
+
         footer {
-            background-color: #333;
+            background-color: #2c3e50;
             color: white;
             text-align: center;
-            padding: 10px;
-            width: 100%;
+            padding: 20px 0;
+            margin-top: 40px;
         }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .services, .benefits {
-                flex-direction: column;
-                align-items: center;
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .section-title {
+                font-size: 1.5rem;
+            }
+
+            .price-card {
+                width: 100%;
+                padding: 20px;
+            }
+
+            nav a {
+                display: block;
+                margin: 10px 0;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>MoZa Digital</h1>
-        <p>Il tuo partner digitale</p>
-        <p>MoZa è la soluzione innovativa per bar e ristoranti che vogliono ottimizzare la gestione e aumentare i profitti attraverso strumenti digitali all'avanguardia.</p>
-        <p>▶️ Video Presentazione MoZa</p>
+        <div class="container">
+            <h1>MoZa Digital</h1>
+            <p>Il tuo partner digitale</p>
+            <p>MoZa è la soluzione innovativa per bar e ristoranti che vogliono ottimizzare la gestione e aumentare i profitti attraverso strumenti digitali all'avanguardia.</p>
+            <a href="#" class="video-link">▶️ Video Presentazione MoZa</a>
+        </div>
     </header>
-    
+
     <nav>
         <a href="#chi-siamo">Chi è MoZa</a>
         <a href="#servizi">Servizi</a>
         <a href="#perche-moza">Perché Scegliere MoZa</a>
         <a href="#prezzi">Prezzi</a>
     </nav>
-    
-    <section id="chi-siamo">
-        <h2>Chi è MoZa e Cosa Fa</h2>
-        <p>MoZa è la soluzione innovativa per bar e ristoranti che vogliono ottimizzare la gestione e aumentare i profitti attraverso strumenti digitali.</p>
-    </section>
-    
-    <section id="servizi">
-        <h2>I Nostri Servizi</h2>
-        <p>Soluzioni complete per digitalizzare il tuo business</p>
-        <div class="services">
-            <div class="service-item">
-                <div class="emoji">📱</div>
-                <h3>Menù Digitale QR Code</h3>
-                <p>Menù interattivi con QR code, aggiornamenti in tempo reale e gestione semplificata dei piatti e prezzi. Perfetto per l'era post-COVID.</p>
+
+    <div class="container">
+        <section id="chi-siamo">
+            <h2 class="section-title">Chi è MoZa e Cosa Fa</h2>
+            <p>MoZa è la soluzione innovativa per bar e ristoranti che vogliono ottimizzare la gestione e aumentare i profitti attraverso strumenti digitali.</p>
+        </section>
+
+        <section id="servizi">
+            <h2 class="section-title">I Nostri Servizi</h2>
+            <p class="section-subtitle">Soluzioni complete per digitalizzare il tuo business</p>
+            <!-- Aggiungi qui le sezioni servizi come nel codice precedente se necessario -->
+        </section>
+
+        <section id="perche-moza">
+            <h2 class="section-title">Perché Scegliere MoZa</h2>
+            <p class="section-subtitle">I vantaggi concreti per il tuo bar o ristorante</p>
+            <!-- Aggiungi qui le sezioni vantaggi come nel codice precedente se necessario -->
+        </section>
+
+        <section id="prezzi">
+            <h2 class="section-title">Prezzi Trasparenti</h2>
+            <p class="section-subtitle">Soluzioni accessibili per ogni tipo di attività</p>
+            <div class="prices-section">
+                <div class="price-card">
+                    <h3>Setup Iniziale</h3>
+                    <div class="price">€124</div>
+                    <div class="price-sub">una tantum</div>
+                    <ul class="features-list">
+                        <li><span class="checkmark">✔</span> Realizzazione completa</li>
+                        <li><span class="checkmark">✔</span> Configurazione iniziale</li>
+                        <li><span class="checkmark">✔</span> QR Code personalizzato</li>
+                        <li><span class="checkmark">✔</span> Training iniziale</li>
+                    </ul>
+                    <div class="made-with">Made with Manus</div>
+                </div>
             </div>
-            <div class="service-item">
-                <div class="emoji">🌐</div>
-                <h3>Sito Web Professionale</h3>
-                <p>Siti web moderni e ottimizzati per bar e ristoranti, con integrazione social, galleria fotografica e sistema di prenotazioni.</p>
-            </div>
-            <div class="service-item">
-                <div class="emoji">📊</div>
-                <h3>Gestione Digitale</h3>
-                <p>Strumenti per ottimizzare la gestione amministrativa, fiscale e bancaria del tuo locale con automazione intelligente.</p>
-            </div>
-            <div class="service-item">
-                <div class="emoji">🌍</div>
-                <h3>Menù Multilingua</h3>
-                <p>Menù tradotti automaticamente in più lingue per accogliere clienti internazionali e turisti nel migliore dei modi.</p>
-            </div>
-            <div class="service-item">
-                <div class="emoji">📅</div>
-                <h3>Sistema Prenotazioni</h3>
-                <p>Gestisci le prenotazioni online con un sistema intuitivo, notifiche automatiche e gestione ottimizzata dei tavoli.</p>
-            </div>
-            <div class="service-item">
-                <div class="emoji">📈</div>
-                <h3>Analytics e Reportistica</h3>
-                <p>Analisi dettagliate delle performance del tuo locale con report automatici per ottimizzare le vendite e la gestione.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="perche-moza">
-        <h2>Perché Scegliere MoZa</h2>
-        <p>I vantaggi concreti per il tuo bar o ristorante</p>
-        <div class="benefits">
-            <div class="benefit-item">
-                <div class="emoji">⏰</div>
-                <h3>Risparmio di Tempo</h3>
-                <p>Libera il tuo tempo prezioso dalla burocrazia e dalla gestione amministrativa, per dedicarti al tuo core business e ai tuoi clienti.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="emoji">💰</div>
-                <h3>Riduzione dei Costi</h3>
-                <p>Ottimizza le tue spese e evita errori costosi nella gestione fiscale e bancaria. Riduci i costi di stampa e aggiornamento menù.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="emoji">⚡</div>
-                <h3>Maggiore Efficienza</h3>
-                <p>Automatizza processi chiave per una gestione più fluida e meno stressante del tuo locale. Ordini più veloci e precisi.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="emoji">✅</div>
-                <h3>Conformità Normativa</h3>
-                <p>Assicurati di essere sempre in regola con le normative fiscali e amministrative, evitando sanzioni e problemi legali.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="emoji">📊</div>
-                <h3>Maggiore Controllo</h3>
-                <p>Avrai sempre sotto controllo la tua situazione finanziaria e documentale con dashboard intuitive e report dettagliati.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="emoji">🌟</div>
-                <h3>Miglioramento Reputazione</h3>
-                <p>Offri un'esperienza moderna e professionale ai tuoi clienti, migliorando la reputazione online del tuo locale.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="emoji">👥</div>
-                <h3>Aumento Clienti</h3>
-                <p>Attira nuovi clienti con soluzioni innovative e migliora la fidelizzazione attraverso un servizio più efficiente.</p>
-            </div>
-            <div class="benefit-item">
-                <div class="emoji">🎯</div>
-                <h3>Gestione Intuitiva</h3>
-                <p>Interfacce semplici e intuitive che non richiedono competenze tecniche avanzate. Formazione inclusa nel servizio.</p>
-            </div>
-        </div>
-    </section>
-    
-    <section id="prezzi" class="pricing">
-        <h2>Prezzi Trasparenti</h2>
-        <p>Soluzioni accessibili per ogni tipo di attività</p>
-        <div class="pricing-item">
-            <h3>Setup Iniziale</h3>
-            <p>€ 124 una tantum</p>
-            <ul>
-                <li>✅ Realizzazione completa</li>
-                <li>✅ Configurazione iniziale</li>
-                <li>✅ QR code personalizzato</li>
-                <li>✅ Training iniziale</li>
-            </ul>
-        </div>
-    </section>
-    
+        </section>
+    </div>
+
     <footer>
         <p>© 2025 MoZa Digital. Tutti i diritti riservati.</p>
     </footer>
